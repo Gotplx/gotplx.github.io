@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gotplx Home</title>
+  <link rel="icon" type="image/png" href="images/WebIcon.png" />
+
+  <style>
+    /* ===== الخطوط ===== */
+    @font-face { font-family: 'GotplxLogo'; src: url('fonts/GotplxLogo.otf') format('opentype'); }
+    @font-face { font-family: 'NewVisionLogo'; src: url('fonts/NewVisionLogo.ttf') format('truetype'); }
+    @font-face { font-family: 'BoldFont'; src: url('fonts/BoldFont.otf') format('opentype'); }
+    @font-face { font-family: 'NormalFont'; src: url('fonts/NormalFont.ttf') format('truetype'); }
+    @font-face { font-family: 'SensArabicFont'; src: url('fonts/SensArabicFont.ttf') format('truetype'); }
+    @font-face { font-family: 'MediaFollow'; src: url('fonts/MediaFollow.ttf') format('truetype'); }
+    @font-face { font-family: 'DGSFont'; src: url('fonts/DGSFont.ttf') format('truetype'); }
+    @font-face { font-family: 'GameFont'; src: url('fonts/GameFont.ttf') format('truetype'); }
+
+    :root {
+      --black:#000; --white:#fff; --white-dim:#d9d9d9; --red:#e32636;
+      --gray-500:#6b6b6b; --shadow:rgba(0,0,0,0.45);
+    }
+
+    body { margin:0; background:var(--black); color:var(--white);
+      font-family:'SensArabicFont','NormalFont',sans-serif; scroll-behavior:smooth; }
+
+    /* ===== أنيميشن ===== */
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+    .animate { animation:fadeInUp 0.8s ease both; }
+    .delay-1{animation-delay:0.1s;} .delay-2{animation-delay:0.2s;} .delay-3{animation-delay:0.3s;}
+
+    /* ===== الهيدر ===== */
+    header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(6px); z-index:1000; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:12px 20px; }
+    .brand { display:flex; align-items:baseline; gap:8px; }
+    .brand .gotplx { font-family:'GotplxLogo'; font-size:28px; }
+    .brand .newvision { font-family:'NewVisionLogo'; font-size:14px; color:var(--white-dim); }
+    @media(max-width:768px){
+      .brand{flex-direction:column; align-items:center;}
+      .brand .newvision{margin-top:4px;}
+      .nav{flex-direction:column; gap:10px;}
+    }
+    .nav-links a { margin:0 8px; color:var(--white); text-decoration:none; font-family:'NormalFont'; }
+
+    /* ===== البطل ===== */
+    .hero { min-height:90vh; display:flex; flex-direction:column; justify-content:center;
+      align-items:center; text-align:center; padding:140px 20px 60px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(0,0,0,0.2)); }
+    .hero h1 { font-family:'BoldFont'; font-size:42px; margin-bottom:20px; }
+    .hero p { max-width:800px; color:var(--white-dim); font-size:18px; line-height:1.8; }
+
+    .cta { margin-top:20px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .btn { background:#111; color:var(--white); padding:10px 16px; border-radius:8px;
+      text-decoration:none; transition:transform 0.2s ease, box-shadow 0.2s ease; }
+    .btn:hover { transform:translateY(-3px); box-shadow:0 6px 16px var(--shadow); }
+
+    /* ===== الأقسام ===== */
+    section { padding:80px 20px; }
+    .section-title h2 { font-family:'BoldFont'; font-size:32px; margin-bottom:10px; }
+    .section-title .sub { color:var(--white-dim); font-size:14px; }
+
+    /* ===== بطاقات التطبيقات ===== */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .card { background:#111; padding:16px; border-radius:12px; box-shadow:0 6px 14px var(--shadow);
+      transition:transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform:translateY(-3px); box-shadow:0 10px 22px var(--shadow); }
+    .card h3 { font-family:'BoldFont'; font-size:18px; margin-bottom:8px; }
+    .version { font-family:'NormalFont'; font-size:12px; color:var(--white-dim); margin-left:6px; }
+    .card p { color:var(--white-dim); font-size:14px; line-height:1.7; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="gotplx">GOTPLX</span>
+      <span class="newvision">New Vision</span>
+    </div>
+    <div class="nav-links">
+      <a href="#apps">تطبيقات</a>
+      <a href="#studio">الاستوديو</a>
+      <a href="#games">الألعاب</a>
+      <a href="#contact">تواصل</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero animate">
+  <h1>عصر برمجيات ذكية وتجارب ألعاب متقدمة</h1>
+  <p>GOTPLX تقدّم رؤية جديدة للبرمجيات والألعاب: من تطبيقات أندرويد إلى عوالم Draco Gloria Studio.</p>
+  <div class="cta">
+    <a class="btn" href="#apps">ابدأ من تطبيقاتنا</a>
+    <a class="btn" href="#games">استكشف ألعابنا</a>
+  </div>
+</section>
+
+<section id="apps">
+  <div class="section-title animate">
+    <h2>تطبيقات أندرويد</h2>
+    <span class="sub">تصميم نظيف، أداء سريع، وتجربة استخدام مريحة.</span>
+  </div>
+  <div class="grid">
+    <div class="card animate delay-1">
+      <h3>Equation <span class="version">v1.5.5</span></h3>
+      <p>آلة حاسبة علمية متقدمة.</p>
+    </div>
+    <div class="card animate delay-2">
+      <h3>OmoPlayer <span class="version">v2.1</span></h3>
+      <p>مشغل موسيقى ذكي.</p>
+    </div>
+    <div class="card animate delay-3">
+      <h3>UniPort <span class="version">v0.2 beta</span></h3>
+      <p>خاصية اتصال ذكية.</p>
+    </div>
+    <div class="card animate delay-1">
+      <h3>Meowboard <span class="version">v2.2.1024</span></h3>
+      <p>لوحة مفاتيح جميلة بميزات لا توصف—ليست مجرد كتابة، بل نظام تشغيل مصغّر على جهازك.</p>
+    </div>
+    <div class="card animate delay-2">
+      <h3>Magna <span class="version">v1.12</span></h3>
+      <p>متصفح مألوف بنكهة GOTPLX الفريدة—بساطة مع شخصية واضحة في الأداء والتجربة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Draco Gloria Studio ===== -->
+<section id="studio" class="games">
+  <div class="section-title animate">
+    <h2 style="font-family:'DGSFont';">Draco Gloria Studio</h2>
+    <span class="sub">استوديو ألعاب مبتكر تابع لـ GOTPLX.</span>
+  </div>
+  <div id="games" class="grid">
+    <div class="card animate delay-1">
+      <img src="images/StealthOpsPlaceholder.png" alt="Stealth Ops: Modern Tactics" class="game-image">
+      <h3 style="font-family:'GameFont';">Stealth Ops: Modern Tactics</h3>
+      <p>لعبة RTS حرب معاصرة بين 5+ فصائل، تضم طور قصة وطور Skirmish/Freeplayer.</p>
+      <div>
+        <span class="version">Windows</span>
+        <span class="version">Android 9+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== تواصل ===== -->
+<section id="contact">
+  <div class="section-title animate">
+    <h2>تواصل معنا</h2>
+    <span class="sub">نسعد بسماع أفكارك أو تعاونك.</span>
+  </div>
+  <div class="grid">
+    <div class="card animate delay-1">
+      <img src="images/instagram.png" class="square-icon" alt="Instagram Gotplx">
+      <p>هذه صفحة Gotplx على إنستجرام: 
+        <a href="https://www.instagram.com/gotplx" target="_blank">instagram.com/gotplx</a>
+      </p>
+    </div>
+    <div class="card animate delay-2">
+      <img src="images/instagram.png" class="square-icon" alt="Instagram Gotplx AI">
+      <p>هذه صفحة Gotplx AI على إنستجرام: 
+        <a href="https://www.instagram.com/gotplx_ai" target="_blank">instagram.com/gotplx_ai</a>
+      </p>
+    </div>
+    <div class="card animate delay-3">
+      <img src="images/instagram.png" class="square-icon" alt="Instagram Draco Gloria Studio">
+      <p>هذه صفحة Draco Gloria Studio على إنستجرام: 
+        <a href="https://www.instagram.com/draco_gloria_studio" target="_blank">instagram.com/draco_gloria_studio</a>
+      </p>
+    </div>
+    <div class="card animate delay-3">
+      <img src="images/gmail.png" class="square-icon" alt="Gmail">
+      <p>البريد الإلكتروني: 
+        <a href="mailto:app.gotplx@gmail.com">app.gotplx@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p>© Gotplx Ltd. 2020–2026 • Draco Gloria Studio. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>
